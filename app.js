@@ -12,12 +12,14 @@ function calculateEcho() {
     const aorta = parseFloat(document.querySelector("#aorta").value);
     const ivs = parseFloat(document.querySelector("#ivs").value);
     const lvWall = parseFloat(document.querySelector("#lvWall").value);
+    const lv = parseFloat(document.querySelector("#lv").value);
 
     let result = document.querySelector("#result");
     let rvResult;
     let laResult;
     let aortaResult;
     let wallsResult;
+    let lvResult;
     let norma;
 
     //Умова для ПШ
@@ -52,15 +54,22 @@ function calculateEcho() {
         wallsResult = '';
     }
 
+     //Умова для лівого шлуночка
+    if (lv > 5.7) {
+       lvResult = `Дилятація лівого шлуночка. `
+    } else {
+        lvResult = '';
+    }
+
     // Розміри камер серця в межах норми
-    if (rvResult === '' && laResult === '' && aortaResult === '' && wallsResult === '') {
+    if (rvResult === '' && laResult === '' && aortaResult === '' && lvResult === '' && wallsResult === '') {
         norma = 'Розміри камер серця в межах норми. ';
     } else {
         norma = '';
     }
 
     ///Виведення інформації
-    result.innerHTML = rvResult + laResult + aortaResult + wallsResult + norma ;
+    result.innerHTML = rvResult + laResult + aortaResult + wallsResult + lvResult + norma ;
 }
 
 
