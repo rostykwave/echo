@@ -18,7 +18,7 @@ function calculateEcho() {
 
     //Умова для ПШ
     if (rv > 2.6) {
-       rvResult = `Дилятація правого шлуночка`
+       rvResult = `Дилятація правого шлуночка. `
     } else {
         rvResult = '';
     }
@@ -26,9 +26,9 @@ function calculateEcho() {
     // Умови для МШП і ЗСЛШ
     if (ivs > 1.1 && lvWall > 1.1) {
         wallsResult = `Гіпертрофія стінок ЛШ. `;
-} else if (ivs > 1.1 && lvWall <= 1.1) {
+} else if (ivs > 1.1) {
     wallsResult = `Гіпертрофія МШП. `;
-    } else if (ivs <= 1.1 && lvWall > 1.1){
+    } else if (lvWall > 1.1){
         wallsResult = `Гіпертрофія задньої стінки ЛШ. `;
     } else {
         wallsResult = '';
