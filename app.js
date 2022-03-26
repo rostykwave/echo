@@ -9,12 +9,14 @@ function calculateEcho() {
     // ivs,lvWall
     const rv = parseFloat(document.querySelector("#rv").value);
     const la = parseFloat(document.querySelector("#la").value);
+    const aorta = parseFloat(document.querySelector("#aorta").value);
     const ivs = parseFloat(document.querySelector("#ivs").value);
     const lvWall = parseFloat(document.querySelector("#lvWall").value);
 
     let result = document.querySelector("#result");
     let rvResult;
     let laResult;
+    let aortaResult;
     let wallsResult;
     let norma;
 
@@ -32,6 +34,13 @@ function calculateEcho() {
         laResult = '';
     }
 
+    //Умова для аорти
+    if (aorta > 3.7) {
+       aortaResult = `Дилятація висхідного відділу аорти. `
+    } else {
+        aortaResult = '';
+    }
+
     // Умови для МШП і ЗСЛШ
     if (ivs > 1.1 && lvWall > 1.1) {
         wallsResult = `Гіпертрофія стінок лівого шлуночка. `;
@@ -44,14 +53,14 @@ function calculateEcho() {
     }
 
     // Розміри камер серця в межах норми
-    if (rvResult === '' && wallsResult === '') {
+    if (rvResult === '' && laResult === '' && aortaResult === '' && wallsResult === '') {
         norma = 'Розміри камер серця в межах норми. ';
     } else {
         norma = '';
     }
 
     ///Виведення інформації
-    result.innerHTML = rvResult + laResult + wallsResult + norma ;
+    result.innerHTML = rvResult + laResult + aortaResult + wallsResult + norma ;
 }
 
 
