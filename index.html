@@ -16,47 +16,53 @@
 <body>
     <section class="section">
         <div class="container">
-            <form class="form">
+            <a href="./bmi.html">BMI</a>
+            <div class="form">
                 <h2 class="form__title">Протокол Ехо-КГ</h2>
-        
-                <label class="form__field">
-                    <span class="form__label">Правий шлуночок</span>
-                    <input class="form__input" type="number" name="rv" min="0.7" step="0.1" max="3.5" id="rv" autofocus>
-                </label>
-
+                
+                
+                <!-- <label class="form__field">
+                                    <span class="form__label">Правий шлуночок</span>
+                                    <input class="form__input" type="number" name="rv" min="0.7" step="0.1" max="3.5" id="rv" autofocus>
+                                </label> -->
+                
                 <label class="form__field">
                     <span class="form__label">Міжшлуночкова перегородка</span>
                     <input class="form__input" list="sizes" type="number" name="ivs" min="0.5" step="0.1" max="1.6" id="ivs">
                 </label>
-
-                <label class="form__field">
-                    <span class="form__label">Задня стінка ЛШ</span>
-                    <input class="form__input" list="sizes" type="number" name="LvWall" min="0.5" step="0.1" max="1.6" id="LvWall">
-                </label>
-        
+                
+                <!-- <label class="form__field">
+                                    <span class="form__label">Задня стінка ЛШ</span>
+                                    <input class="form__input" list="sizes" type="number" name="lvWall" min="0.5" step="0.1" max="1.6" id="lvWall">
+                                </label> -->
+                
+                <button id="btn">Висновок</button>
+                
+                <div id="result"></div>
+                
                 <!-- <div class="group">
-                        <label for="rv">Правий шлуночок</label>
-                        <input type="number" name="rv" min="0.7" step="0.1" max="3.5" id="rv">
-                    </div> -->
+                                        <label for="rv">Правий шлуночок</label>
+                                        <input type="number" name="rv" min="0.7" step="0.1" max="3.5" id="rv">
+                                    </div> -->
                 
-                    <!-- <div class="group">
-                        <label for="mitral">Недостатність мітрального клапана</label>
-                        <input list="valves" id="mitral">
+                <!-- <div class="group">
+                                        <label for="mitral">Недостатність мітрального клапана</label>
+                                        <input list="valves" id="mitral">
+                                
+                                        <datalist id="valves">
+                                            <option>0.5+</option>
+                                            <option>1+</option>
+                                            <option>1.5+</option>
+                                            <option>2+</option>
+                                            <option>2.5+</option>
+                                            <option>3+</option>
+                                        </datalist>
+                                
+                                    </div>
+                                    <div class="group"></div> -->
                 
-                        <datalist id="valves">
-                            <option>0.5+</option>
-                            <option>1+</option>
-                            <option>1.5+</option>
-                            <option>2+</option>
-                            <option>2.5+</option>
-                            <option>3+</option>
-                        </datalist>
                 
-                    </div>
-                    <div class="group"></div> -->
-        
-    
-
+                
                 <datalist id="sizes">
                     <option>0.8</option>
                     <option>0.9</option>
@@ -65,7 +71,7 @@
                     <option>1.2</option>
                     <option>1.3</option>
                 </datalist>
-            </form>
+            </div>
         </div>
     </section>
     <script src="./app.js"></script>
