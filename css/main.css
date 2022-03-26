@@ -74,6 +74,10 @@ img {
   margin: 0 auto;
   text-align: center;
   width: calc(100% - 30px);
+  background: #ffffff;
+  -webkit-box-shadow: 9px 8px 43px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 9px 8px 43px -10px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
 }
 
 @media screen and (min-width: 480px) {
@@ -265,5 +269,19 @@ img {
   line-height: 1.17;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.button {
+  display: inline-block;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+  height: 50px;
+  background-color: #2767b3;
+  border-radius: 7px;
+  font-size: 16px;
+  line-height: 119.18%;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
