@@ -24,14 +24,14 @@
                 <h2 class="form__title">Протокол Ехо-КГ</h2>
                 
                 
-                <!-- <label class="form__field">
-                                    <span class="form__label">Правий шлуночок</span>
-                                    <input class="form__input" type="number" name="rv" min="0.7" step="0.1" max="3.5" id="rv" autofocus>
-                                </label> -->
+                <label class="form__field">
+                    <span class="form__label">Правий шлуночок</span>
+                    <input class="form__input" list="rv-sizes" type="number" name="rv" min="0.7" step="0.1" max="3.5" id="rv" autofocus>
+                </label>
                 
                 <label class="form__field">
                     <span class="form__label">Міжшлуночкова перегородка</span>
-                    <input class="form__input" list="sizes" type="number" name="ivs" min="0.5" step="0.1" max="1.6" id="ivs">
+                    <input class="form__input" list="wall-sizes" type="number" name="ivs" min="0.5" step="0.1" max="1.6" id="ivs">
                 </label>
                 
                 <label class="form__field">
@@ -66,7 +66,7 @@
                 
                 
                 
-                <datalist id="sizes">
+                <datalist id="wall-sizes">
                     <option>0.8</option>
                     <option>0.9</option>
                     <option>1</option>
@@ -77,6 +77,20 @@
                     <option>1.5</option>
                     <option>1.6</option>
                     <option>1.7</option>
+                </datalist>
+
+                <datalist id="rv-sizes">
+                    <option>1.8</option>
+                    <option>1.9</option>
+                    <option>2</option>
+                    <option>2.1</option>
+                    <option>2.2</option>
+                    <option>2.3</option>
+                    <option>2.4</option>
+                    <option>2.5</option>
+                    <option>2.6</option>
+                    <option>2.7</option>
+                    <option>2.8</option>
                 </datalist>
             </div>
         </div>
