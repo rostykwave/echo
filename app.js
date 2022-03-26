@@ -69,7 +69,7 @@ function calculateEcho() {
     }
 
     ///Виведення інформації
-    result.innerHTML = rvResult + laResult + aortaResult + wallsResult + lvResult + norma ;
+    result.innerHTML = rvResult + laResult + aortaResult + lvResult + wallsResult + norma ;
 }
 
 

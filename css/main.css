@@ -140,6 +140,22 @@ img {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.23);
+}
+
+.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.23);
+}
+
+.form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.23);
+}
+
+.form__input::placeholder, .form__textarea::placeholder {
+  color: rgba(0, 0, 0, 0.23);
+}
+
 .form__input:focus-visible, .form__textarea:focus-visible {
   outline: 1px solid #2196f3;
 }
