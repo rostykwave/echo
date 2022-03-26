@@ -40,7 +40,7 @@ function calculateEcho() {
     } else if (rv > 2.6) {
        rvResult = `Дилятація правого шлуночка. `
     } else if (rv < 0.9) {
-        rvResult = `Розміри правого шлуночка є нижчими від норми`
+        rvResult = `Розміри правого шлуночка є нижчими від норми. `
     } else {
         rvResult = '';
     }
@@ -88,7 +88,24 @@ function calculateEcho() {
     }
 
     ///Виведення інформації
-    result.innerHTML = rvResult + laResult + aortaResult + lvResult + wallsResult + norma ;
+    result = rvResult + laResult + aortaResult + lvResult + wallsResult + norma;
+
+    // if (result !== 'undefined') {
+    //     confirm(result);
+    // }
+
+    if (result.includes('undefined')) {
+        
+    } else {
+        confirm(result);
+    }
+
+    // console.log(result);
+    // console.log(typeof(result));
+
+
+    result.innerHTML = result;
+    
 }
 
 
