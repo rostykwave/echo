@@ -30,13 +30,13 @@ function calculateEcho() {
     // }
 
     if (rv === '' ) {
-        confirm('Введіть розмір Правого шлуночка у см')
+        alert('Введіть розмір Правого шлуночка у см')
     } else if (isNaN(rv)) {
-        confirm('Введіть числове значення розміру Правого шлуночка у см')
+        alert('Введіть числове значення розміру Правого шлуночка у см')
     } else if (rv <= 0) {
-        confirm('Введіть додатнє число розміру Правого шлуночка у см')
+        alert('Введіть додатнє число розміру Правого шлуночка у см')
     } else if (rv > 7) {
-        confirm('Це завелике значення для розміру Правого шлуночка у см')
+        alert('Введене значення для розміру Правого шлуночка у см є завеликим')
     } else if (rv > 2.6) {
        rvResult = `Дилятація правого шлуночка. `
     } else if (rv < 0.9) {
@@ -88,23 +88,11 @@ function calculateEcho() {
     }
 
     ///Виведення інформації
-    result = rvResult + laResult + aortaResult + lvResult + wallsResult + norma;
-
-    // if (result !== 'undefined') {
-    //     confirm(result);
-    // }
-
-    if (result.includes('undefined')) {
-        
-    } else {
-        confirm(result);
-    }
 
     // console.log(result);
     // console.log(typeof(result));
 
-
-    result.innerHTML = result;
+    result.innerHTML = rvResult + laResult + aortaResult + lvResult + wallsResult + norma;
     
 }
 
