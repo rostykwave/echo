@@ -14,6 +14,8 @@ function calculateEcho() {
     const lvWall = parseFloat(document.querySelector("#lvWall").value);
     const lv = parseFloat(document.querySelector("#lv").value);
 
+    let alertNotification = document.querySelector('#alert')
+
     let result = document.querySelector("#result");
     let rvResult;
     let laResult;
@@ -30,13 +32,17 @@ function calculateEcho() {
     // }
 
     if (rv === '' ) {
-        alert('Введіть розмір Правого шлуночка у см')
+        // alert('Введіть розмір Правого шлуночка у см')
+        alertNotification1 = 'Введіть розмір у см'
     } else if (isNaN(rv)) {
-        alert('Введіть числове значення розміру Правого шлуночка у см')
+        // alert('Введіть числове значення розміру Правого шлуночка у см')
+        alertNotification1 = 'Введіть числове значення'
     } else if (rv <= 0) {
-        alert('Введіть додатнє число розміру Правого шлуночка у см')
+        // alert('Введіть додатнє число розміру Правого шлуночка у см')
+        alertNotification1 = 'Введіть додатнє число'
     } else if (rv > 7) {
-        alert('Введене значення для розміру Правого шлуночка у см є завеликим')
+        // alert('Введене значення для розміру Правого шлуночка у см є завеликим')
+        alertNotification1 = 'Введене значення є завеликим'
     } else if (rv > 2.6) {
        rvResult = `Дилятація правого шлуночка. `
     } else if (rv < 0.9) {
@@ -92,7 +98,14 @@ function calculateEcho() {
     // console.log(result);
     // console.log(typeof(result));
 
-    result.innerHTML = rvResult + laResult + aortaResult + lvResult + wallsResult + norma;
+    // result.innerHTML = rvResult + laResult + aortaResult + lvResult + wallsResult + norma;
+
+    result.textContent = rvResult + laResult + aortaResult + lvResult + wallsResult + norma;
+
+    alertNotification.textContent = alertNotification1;
+    // console.log(result);
+
+    // console.log(alertNotification1);
     
 }
 
