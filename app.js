@@ -14,7 +14,7 @@ function calculateEcho() {
     const lvWall = parseFloat(document.querySelector("#lvWall").value);
     const lv = parseFloat(document.querySelector("#lv").value);
 
-    let alertNotification = document.querySelector('#alert')
+    let alertNotification = document.querySelector('#alert');
     let result = document.querySelector("#result");
     let rvResult;
     let laResult;
@@ -32,25 +32,25 @@ function calculateEcho() {
 
     if (rv === '' ) {
         // alert('Введіть розмір Правого шлуночка у см')
-        alertNotification1 = 'Введіть розмір у см'
+        alertNotification1 = 'Введіть розмір у см';
     } else if (isNaN(rv)) {
         // alert('Введіть числове значення розміру Правого шлуночка у см')
-        alertNotification1 = 'Введіть числове значення'
+        alertNotification1 = 'Введіть числове значення';
     } else if (rv <= 0) {
         // alert('Введіть додатнє число розміру Правого шлуночка у см')
-        alertNotification1 = 'Введіть додатнє число'
+        alertNotification1 = 'Введіть додатнє число';
     } else if (rv > 7) {
         // alert('Введене значення для розміру Правого шлуночка у см є завеликим')
-        alertNotification1 = 'Введене значення є завеликим'
+        alertNotification1 = 'Введене значення є завеликим';
     } else if (rv > 2.6) {
-        rvResult = `Дилятація правого шлуночка. `
-        alertNotification1 = ''
+        rvResult = `Дилятація правого шлуночка. `;
+        alertNotification1 = '';
     } else if (rv < 0.9) {
-        rvResult = `Розміри правого шлуночка є нижчими від норми. `
-        alertNotification1 = ''
+        rvResult = `Розміри правого шлуночка є нижчими від норми. `;
+        alertNotification1 = '';
     } else {
         rvResult = '';
-        alertNotification1 = ''
+        alertNotification1 = '';
     }
 
     //Створити масив даних, де завести всі дані про конкретний відділ серця, параметри для проходження перевірки тощо
@@ -58,14 +58,14 @@ function calculateEcho() {
 
     //Умова для ЛП
     if (la > 4) {
-       laResult = `Дилятація лівого передсердя. `
+        laResult = `Дилятація лівого передсердя. `;
     } else {
         laResult = '';
     }
 
     //Умова для аорти
     if (aorta > 3.7) {
-       aortaResult = `Дилятація висхідного відділу аорти. `
+        aortaResult = `Дилятація висхідного відділу аорти. `;
     } else {
         aortaResult = '';
     }
