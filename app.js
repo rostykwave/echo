@@ -15,7 +15,6 @@ function calculateEcho() {
     const lv = parseFloat(document.querySelector("#lv").value);
 
     let alertNotification = document.querySelector('#alert')
-
     let result = document.querySelector("#result");
     let rvResult;
     let laResult;
