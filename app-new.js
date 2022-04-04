@@ -204,4 +204,7 @@ function calculateEcho() {
 
     ///work with alert
 
+
+    ///Створити різні змінні на результати
+
 }
